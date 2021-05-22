@@ -25,5 +25,14 @@ create table dept_manager(
 	primary key (dept_no)
 );
 
-select * from dept_manager
+create table titles(
+	title_id varchar(20) primary key,
+	title varchar(20)
+);
+
+create table salaries(
+	emp_no int,
+	salary money,
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
+);
 
