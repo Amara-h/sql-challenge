@@ -20,9 +20,10 @@ create table dept_emp(
 );
 
 create table dept_manager(
-	emp_no int,
+	dep_no varchar(30) primary key,
 	dept_no varchar(30),
-	primary key (dept_no)
+	emp_no int 
+	
 );
 
 create table titles(
