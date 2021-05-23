@@ -80,3 +80,13 @@ left join departments as d
 on de.dept_no = d.dept_no
 where d.dept_name = 'Sales' or d.dept_name = 'Development';
 
+
+-- 8)In descending order, list the frequency count of employee last names
+
+select last_name, count(*)
+as "frequency_of_last_names"
+from employees
+group by last_name
+order by "frequency_of_last_names" desc;
+
+
